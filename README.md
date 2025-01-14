@@ -37,3 +37,6 @@ Any modern web browser (e.g., Chrome, Firefox, Edge).
 #License
 This project is open-source and available for customization.
 
+#How to run
+Run simply the html file 
+
