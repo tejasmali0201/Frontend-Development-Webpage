@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Development Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        /* Layout styles */
+        .container {
+            display: flex;
+            margin-top: 4rem;
+            min-height: calc(100vh - 4rem);
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .left-menu, .right-panel {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .left-menu {
+            flex: 1;
+            max-width: 250px;
+        }
+
+        .main-content {
+            flex: 3;
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .right-panel {
+            flex: 1;
+            max-width: 250px;
+        }
+
+        .footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+
+        /* Collapsible menu styles */
+        .collapsed {
+            max-width: 60px;
+            overflow: hidden;
+        }
+
+        .collapse-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left-menu, .right-panel {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">Fixed Navbar</div>
+
+    <div class="container">
+        <div class="left-menu">
+            <button class="collapse-btn" onclick="toggleMenu()">Toggle Menu</button>
+            <p>Left Menu Content</p>
+        </div>
+        <div class="main-content">Main Content Area</div>
+        <div class="right-panel">Right Panel Content</div>
+    </div>
+
+    <div class="footer">Footer Content</div>
+
+    <script>
+        function toggleMenu() {
+            const leftMenu = document.querySelector('.left-menu');
+            leftMenu.classList.toggle('collapsed');
+        }
+    </script>
+</body>
+</html>
